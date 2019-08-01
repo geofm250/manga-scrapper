@@ -1,0 +1,39 @@
+{
+  "name": "manga-scrapper",
+  "version": "1.0.0",
+  "description": "A screen scraper for manga sites.",
+  "main": "./lib/index.js",
+  "bin": {
+    "manga-scrapper": "./lib/index.js"
+  },
+  "dependencies": {
+    "clear": "^0.1.0",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "figlet": "^1.2.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.9",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "test": "sudo npm i -g && manga-scrapper",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geofm250/manga-scrapper.git"
+  },
+  "author": "geoffreym250",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geofm250/manga-scrapper/issues"
+  },
+  "homepage": "https://github.com/geofm250/manga-scrapper#readme"
+}
